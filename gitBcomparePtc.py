@@ -2,13 +2,13 @@ import os
 from subprocess import call
 
 def main():
-    # path to beyond compare executable
+    # path to beyond compare executable (USE FORWARD SLASHES)
     bcompare_path = "C:/Program Files/Beyond Compare 4/BCompare.exe"
-    # PLACE YOUR GIT REPO PATH
-    git_path = "C:/Users/dakin/Desktop/Restaurant-Distributed-Application-Using-gRPC-Framework/"
+    # PLACE YOUR GIT REPO PATH (USE FORWARD SLASHES)
+    git_path = "C:Users/your git path/"
     # PLACE YOUR PTC SANDBOX PATH
-    ptc_path = "C:/Users/dakin/Desktop/RestaurantServerPTC/Restaurant-Distributed-Application-Using-gRPC-Framework/"
-    # READ FILE WITH GIT MODIFIED FILES
+    ptc_path = "C:/Users/your path/"
+    # READ FILE WITH GIT MODIFIED FILES (USE FORWARD SLASHES)
     text_file = open("files.txt","r")
     dir_path = text_file.readline()
     while dir_path:
