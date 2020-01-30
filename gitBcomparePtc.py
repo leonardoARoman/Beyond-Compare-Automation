@@ -11,6 +11,7 @@ def main():
     # READ FILE WITH GIT MODIFIED FILES (USE FORWARD SLASHES)
     text_file = open("files.txt","r")
     dir_path = text_file.readline()
+    count = 0
     while dir_path:
         # CONSTRUCT GIT ABSOLUTE PATH
         git_source_path = os.path.join(git_path,dir_path)
@@ -24,6 +25,8 @@ def main():
         call(args)
         # NEXT PATH
         dir_path = text_file.readline()
-
+        # NUMBER OF FILES COMPARED
+        count = count + 1
+    print(count," files compared")
 if __name__ == '__main__':
     main()
